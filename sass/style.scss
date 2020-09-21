@@ -1,0 +1,148 @@
+body {
+  // perspective: 700px;
+  &.noClick {
+    pointer-events: none;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/******* Start Memory_Game *******/
+.start_game {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #007bffb3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  span {
+    color: #fff;
+    background: #f44336;
+    padding: 15px 30px;
+    font-size: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+.memory_game {
+  width: 60%;
+  margin: 100px auto;
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f0eeee;
+    border: 2px solid #00f;
+    margin: 10px 0;
+    .name {
+      span {
+        color: blue;
+        font-weight: bold;
+      }
+    }
+    .wrongTries {
+      span {
+        color: red;
+        font-weight: bold;
+      }
+    }
+  }
+  .game_blocks {
+    display: flex;
+    flex-wrap: wrap;
+    &.noClick {
+      pointer-events: none;
+    }
+    .game_block {
+      flex: 1 0 150px;
+      height: 150px;
+      margin: 10px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: all 0.5s linear;
+      position: relative;
+      &.noClick {
+        pointer-events: none;
+      }
+      &.isFlibbed,
+      &.has_match {
+        transform: rotateY(180deg);
+      }
+      .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      .front {
+        background-color: #333;
+        color: #fff;
+        line-height: 150px;
+        text-align: center;
+        z-index: 2;
+        border: 2px solid #00f;
+        backface-visibility: hidden;
+        &:after {
+          content: "?";
+          font-size: 40px;
+        }
+      }
+      .back {
+        background-color: #607d8b;
+        z-index: 1;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.endGamePopup {
+  position: fixed;
+  display: flex;
+  opacity: 0;
+  transition: all 0.3s linear;
+  justify-content: center;
+  align-items: center;
+  background: #0000009e;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  .popup {
+    background-color: #fff;
+    .header {
+      color: #333;
+      text-align: center;
+      background-color: #eee;
+      padding: 10px;
+      font-size: 20px;
+      box-shadow: 0 0 5px #333;
+    }
+    .message {
+      color: red;
+      font-size: 40px;
+      text-align: center;
+      font-weight: bold;
+      padding: 40px;
+    }
+    .footer {
+      text-align: center;
+      background: #cfcfcf;
+      padding: 10px;
+    }
+  }
+}
+/******* End Memory_Game  *******/
