@@ -19,7 +19,13 @@ ul {
   margin: 100px auto;
   h1 {
     color: #d7d7d7;
-    font-size: 50px;
+    font-size: 3em;
+  }
+  @media (max-width: 500px) {
+    padding: 18px;
+    h1 {
+      font-size: 25px;
+    }
   }
   p {
     color: #00e500;

@@ -18,7 +18,15 @@ ul {
 }
 .autor h1 {
   color: #d7d7d7;
-  font-size: 50px;
+  font-size: 3em;
+}
+@media (max-width: 500px) {
+  .autor {
+    padding: 18px;
+  }
+  .autor h1 {
+    font-size: 25px;
+  }
 }
 .autor p {
   color: #00e500;
