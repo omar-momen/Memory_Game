@@ -5,6 +5,7 @@
   let StartBuut = document.querySelector(".start_game span");
   StartBuut.onclick = function () {
     let playerName = prompt("Your Name");
+    let time = prompt("Time in Seconds", 60);
     if (playerName == null || playerName == "") {
       document.querySelector(".memory_game .info .name span").innerHTML =
         "Unknown";
@@ -18,6 +19,35 @@
     document.getElementById("drums").play();
     setTimeout(() => {
       document.querySelector("body").classList.remove("noClick");
+      // Timer
+      let seconds = time;
+      let timeDiv = document.getElementById("time");
+      window.Timer = setInterval(() => {
+        let minutes = Math.floor(seconds / 60),
+          remSeconds = seconds % 60;
+        if (remSeconds < 10) {
+          remSeconds = "0" + remSeconds;
+        }
+        if (window.minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        if (seconds <= 0) {
+          clearInterval(Timer);
+          // Game End
+          document.getElementById("message").textContent = "You lose";
+          setTimeout(() => {
+            document.getElementById("EndgameFail").play();
+            document.getElementById("endGamePopup").style.opacity = "1";
+            document.getElementById("endGamePopup").style.zIndex = "100";
+          }, 400);
+          document.getElementById("playAgain").onclick = function () {
+            location.reload();
+          };
+        } else {
+          seconds = seconds - 1;
+        }
+        timeDiv.innerHTML = `${minutes}:${remSeconds}`;
+      }, 1000);
     }, 4000);
   };
 
@@ -91,10 +121,19 @@
       stopClicking();
       checkMatchedBlocks(allFlipedBlocks[0], allFlipedBlocks[1]);
     }
+    // Game End Fail
+
+    // Game End Success
     let GameEnd = blocks.filter((allBlocks) =>
       allBlocks.classList.contains("has_match")
     );
     if (GameEnd.length == blocks.length) {
+      clearInterval(window.Timer);
+      // localStorage
+      let key = document.getElementById("WiningPlayerName").textContent;
+      let value = tries.textContent;
+      localStorage.setItem(key, value);
+      /************/
       document.getElementById("message").textContent = "You Win";
       setTimeout(() => {
         document.getElementById("GameEndSuccess").play();
@@ -105,6 +144,19 @@
         location.reload();
       };
     }
+  }
+  // locaStorage
+  let outPutDiv = document.getElementById("previousWiningPlayers");
+  for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    let value = localStorage.getItem(key);
+    outPutDiv.innerHTML += `<div class="player">
+    <span>Name: <span>${key}</span></span>
+    <span>Wrong_Tries: <span>${value}</span></span>
+    </div>`;
+  }
+  if (localStorage.length > 0) {
+    outPutDiv.classList.add("ok");
   }
 
   /****************************  End Memory_Game ****************************/

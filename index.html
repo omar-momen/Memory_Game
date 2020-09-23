@@ -19,16 +19,20 @@
   <audio id="fail" src="audio/Memory_Game/fail.mp3" preload="auto"></audio>
   <audio id="drums" src="audio/Memory_Game/drums.mp3" preload="auto"></audio>
   <audio id="GameEndSuccess" src="audio/Memory_Game/GameEndSuccess.mp3" preload="auto"></audio>
+  <audio id="EndgameFail" src="audio/Memory_Game/EndgameFail.mp3" preload="auto"></audio>
   <div class="start_game">
     <span>Start Game</span>
   </div>
   <div class="memory_game">
     <div class="info">
       <div class="name">
-        Hello: <span id="playerNamee"></span>
+        Hello: <span id="WiningPlayerName"></span>
+      </div>
+      <div class="timer">
+        <span id="time">00:00</span>
       </div>
       <div class="wrongTries">
-        Wrong Tries: <span>0</span>
+        Wrong Tries: <span id="wrongTries">0</span>
       </div>
     </div>
     <div class="game_blocks">
@@ -153,7 +157,7 @@
         </div>
       </div>
     </div>
-    <div id="results" class="results">
+    <div id="previousWiningPlayers" class="previousWiningPlayers">
     </div>
   </div>
   <div id="endGamePopup" class="endGamePopup">
@@ -170,7 +174,6 @@
 
 
 
-  <script src="js/libs/bootstrap.min.js"></script>
   <script src="js/custom.js" type="module"></script>
 </body>
 
