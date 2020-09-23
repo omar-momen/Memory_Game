@@ -20,18 +20,22 @@
     setTimeout(() => {
       document.querySelector("body").classList.remove("noClick");
       // Timer
-      let seconds = time;
+      if (time == null || time == "") {
+        window.seconds = 60;
+      } else {
+        window.seconds = time;
+      }
       let timeDiv = document.getElementById("time");
       window.Timer = setInterval(() => {
-        let minutes = Math.floor(seconds / 60),
-          remSeconds = seconds % 60;
+        let minutes = Math.floor(window.seconds / 60),
+          remSeconds = window.seconds % 60;
         if (remSeconds < 10) {
           remSeconds = "0" + remSeconds;
         }
         if (window.minutes < 10) {
           minutes = "0" + minutes;
         }
-        if (seconds <= 0) {
+        if (window.seconds <= 0) {
           clearInterval(Timer);
           // Game End
           document.getElementById("message").textContent = "You lose";
@@ -44,7 +48,7 @@
             location.reload();
           };
         } else {
-          seconds = seconds - 1;
+          window.seconds = window.seconds - 1;
         }
         timeDiv.innerHTML = `${minutes}:${remSeconds}`;
       }, 1000);
