@@ -16,9 +16,7 @@ ul {
   width: 100%;
   height: 100%;
   background-color: #007bffb3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -52,6 +50,14 @@ ul {
   border: 2px solid #00f;
   margin: 10px 0;
 }
+@media (max-width: 400px) {
+  .memory_game .info {
+    display: block;
+  }
+  .memory_game .info > * {
+    margin: 10px 0;
+  }
+}
 .memory_game .info .name span {
   color: blue;
   font-weight: bold;
@@ -66,15 +72,18 @@ ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 .memory_game .game_blocks.noClick {
   pointer-events: none;
 }
 .memory_game .game_blocks .game_block {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 150px;
-          flex: 1 0 150px;
+  width: 150px;
   height: 150px;
+  line-height: 150px;
   margin: 10px;
   cursor: pointer;
   -webkit-transform-style: preserve-3d;
@@ -82,6 +91,27 @@ ul {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   position: relative;
+}
+@media (max-width: 1200px) {
+  .memory_game .game_blocks .game_block {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+  }
+}
+@media (max-width: 900px) {
+  .memory_game .game_blocks .game_block {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 300px) {
+  .memory_game .game_blocks .game_block {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
 }
 .memory_game .game_blocks .game_block.noClick {
   pointer-events: none;
@@ -100,7 +130,6 @@ ul {
 .memory_game .game_blocks .game_block .front {
   background-color: #333;
   color: #fff;
-  line-height: 150px;
   text-align: center;
   z-index: 2;
   border: 2px solid #00f;

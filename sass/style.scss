@@ -18,7 +18,7 @@ ul {
   width: 100%;
   height: 100%;
   background-color: #007bffb3;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 100;
@@ -41,6 +41,12 @@ ul {
     background: #f0eeee;
     border: 2px solid #00f;
     margin: 10px 0;
+    @media (max-width: 400px) {
+      display: block;
+      & > * {
+        margin: 10px 0;
+      }
+    }
     .name {
       span {
         color: blue;
@@ -57,12 +63,30 @@ ul {
   .game_blocks {
     display: flex;
     flex-wrap: wrap;
+    width: fit-content;
+    margin: 0 auto;
     &.noClick {
       pointer-events: none;
     }
     .game_block {
-      flex: 1 0 150px;
+      width: 150px;
       height: 150px;
+      line-height: 150px;
+      @media (max-width: 1200px) {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+      }
+      @media (max-width: 900px) {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+      }
+      @media (max-width: 300px) {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+      }
       margin: 10px;
       cursor: pointer;
       transform-style: preserve-3d;
@@ -85,7 +109,6 @@ ul {
       .front {
         background-color: #333;
         color: #fff;
-        line-height: 150px;
         text-align: center;
         z-index: 2;
         border: 2px solid #00f;
