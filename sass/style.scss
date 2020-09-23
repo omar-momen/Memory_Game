@@ -11,6 +11,20 @@ ul {
 }
 
 /******* Start Memory_Game *******/
+.autor {
+  padding: 50px;
+  text-align: center;
+  background-color: #333;
+  width: 50%;
+  margin: 100px auto;
+  h1 {
+    color: #d7d7d7;
+    font-size: 50px;
+  }
+  p {
+    color: #00e500;
+  }
+}
 .start_game {
   position: fixed;
   top: 0;
