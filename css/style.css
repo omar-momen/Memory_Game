@@ -253,5 +253,192 @@ ul {
 }
 
 /******* End Memory_Game  *******/
+/* Start Todo list */
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.todo_container {
+  width: 60%;
+  margin: 50px auto;
+}
+.todo_container .add_todo {
+  padding: 10px 15px;
+  background-color: #009688;
+  position: relative;
+}
+.todo_container .add_todo input {
+  width: calc(100% - 15px);
+  padding: 10px;
+  background-color: #ffffff61;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.todo_container .add_todo span {
+  position: absolute;
+  right: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #fff;
+  font-size: 30px;
+  color: #009688;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.todo_container .add_todo span:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.todo_container .tasks {
+  padding: 15px 15px 9px;
+  background-color: #e7e7e7;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.todo_container .tasks span.no_tasks_messgae {
+  color: #777;
+}
+.todo_container .tasks > span {
+  display: block;
+  padding: 10px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .todo_container .tasks > span {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .todo_container .tasks > span button {
+    margin: 10px auto 0;
+  }
+}
+.todo_container .tasks > span.finished span {
+  text-decoration: line-through;
+  color: #ff0000;
+}
+.todo_container .tasks > span.finished span:hover {
+  color: #ff0000;
+}
+.todo_container .tasks > span:not(:last-child) {
+  margin-bottom: 10px;
+}
+.todo_container .tasks > span span {
+  color: #333;
+  font-weight: bold;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.todo_container .tasks > span span:hover {
+  color: #e52a00;
+}
+.todo_container .tasks > span button {
+  width: 100px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #e91e63;
+  border: none;
+  outline: none;
+  width: 70px;
+  border-radius: 10px;
+}
+.todo_container .tasks .deleteAndFinishAll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.todo_container .tasks .deleteAndFinishAll button {
+  width: 100px;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  width: 70px;
+  border-radius: 10px;
+}
+.todo_container .tasks .deleteAndFinishAll button:first-child {
+  background-color: #039ef4;
+}
+.todo_container .tasks .deleteAndFinishAll button:first-child.disabled {
+  background-color: #039ef45e;
+}
+.todo_container .tasks .deleteAndFinishAll button:last-child {
+  background-color: #e91e63;
+}
+.todo_container .tasks .deleteAndFinishAll button:last-child.disabled {
+  background-color: #e91e633b;
+}
+.todo_container .tasks_status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0;
+}
+.todo_container .tasks_status .tasks_count span,
+.todo_container .tasks_status .tasks_completed span {
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 0 5px;
+  font-size: 13px;
+}
+.todo_container .tasks_status .tasks_count span {
+  background-color: #e91e63;
+}
+.todo_container .tasks_status .tasks_completed span {
+  background-color: #039ef4;
+}
+
+/* End Todo list */
+.scroller {
+  overflow-y: scroll;
+  scrollbar-color: #009578 transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #009578;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6dcdb1;
+}
 
 /*# sourceMappingURL=style.css.map */

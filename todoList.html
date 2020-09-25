@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroller">
+
+<head>
+  <title>js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <h1>To_Do_List</h1>
+
+  <!-- Start Todo List -->
+  <div class="todo_container">
+    <div class="add_todo">
+      <input type="text">
+      <span>+</span>
+    </div>
+    <div class="tasks scroller">
+      <span class="no_tasks_messgae"> No tasks To show</span>
+      <div class="deleteAndFinishAll">
+        <button class="finishAll">FinishAll</button>
+        <button class="deleteAll">DeleteAll</button>
+      </div>
+    </div>
+    <div class="tasks_status">
+      <div class="tasks_count">
+        Tasks<span id="tasksCount"></span>
+      </div>
+      <div class="tasks_completed">
+        Completed<span id="tasksCompleted"></span>
+      </div>
+    </div>
+  </div>
+  <!-- End Todo List -->
+
+
+
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/todoList.js" type="module"></script>
+</body>
+
+</html>
