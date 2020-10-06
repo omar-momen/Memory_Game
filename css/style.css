@@ -1,3 +1,6 @@
+body {
+  background-color: #333;
+}
 body.noClick {
   pointer-events: none;
 }
@@ -6,6 +9,11 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  color: #fff;
+  margin: 20px;
 }
 
 /******* Start Memory_Game *******/
@@ -418,6 +426,112 @@ h1 {
 }
 
 /* End Todo list */
+/******* Start GitHib Repso *******/
+.get_repos_container {
+  width: 70%;
+  margin: 0 auto 50px;
+}
+.get_repos_container .get_repos {
+  padding: 15px;
+  background-color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.get_repos_container .get_repos input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 10px;
+  color: #333;
+  border: none;
+  height: 50px;
+}
+.get_repos_container .get_repos input:focus {
+  outline: 2px solid #17a2b8;
+}
+.get_repos_container .get_repos button.get_butt {
+  height: 50px;
+  background-color: #17a2b8;
+  color: #fff;
+  border: none;
+  outline: none;
+  text-align: center;
+  line-height: 50px;
+  margin-left: 10px;
+}
+@media (max-width: 510px) {
+  .get_repos_container .get_repos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .get_repos_container .get_repos button.get_butt {
+    margin: 10px auto 0;
+    width: 50%;
+    height: auto;
+  }
+}
+.get_repos_container .show_repos {
+  background-color: #e0e0e0;
+  padding: 15px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.get_repos_container .show_repos .error {
+  background-color: #dd0000;
+  padding-bottom: 5px;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+}
+.get_repos_container .show_repos .no_repos_msg {
+  background-color: #009bdd;
+}
+.get_repos_container .show_repos .repo {
+  padding: 10px;
+  background-color: #fff;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.get_repos_container .show_repos .repo:not(:last-child) {
+  margin-bottom: 10px;
+}
+.get_repos_container .show_repos .repo span {
+  color: #333;
+}
+.get_repos_container .show_repos .repo a {
+  background-color: #e91e63;
+  display: inline-block;
+  border-radius: 20px;
+  width: 100px;
+  color: #fff;
+  text-align: center;
+}
+.get_repos_container .show_repos .repo a:hover {
+  text-decoration: none;
+}
+@media (max-width: 510px) {
+  .get_repos_container .show_repos .repo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .get_repos_container .show_repos .repo a {
+    margin: 10px auto 0;
+    width: 50%;
+  }
+}
+
+/******* End GitHib Repso *******/
 .scroller {
   overflow-y: scroll;
   scrollbar-color: #009578 transparent;
