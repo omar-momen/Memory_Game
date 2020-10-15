@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroller">
+
+<head>
+  <title>js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/libs/all.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="hangman">
+
+  <audio id="success" src="audio/Memory_Game/success.mp3" preload="auto"></audio>
+  <audio id="fail" src="audio/Memory_Game/fail.mp3" preload="auto"></audio>
+  <audio id="drums" src="audio/Memory_Game/drums.mp3" preload="auto"></audio>
+  <audio id="GameEndSuccess" src="audio/Memory_Game/GameEndSuccess.mp3" preload="auto"></audio>
+  <audio id="EndgameFail" src="audio/Memory_Game/EndgameFail.mp3" preload="auto"></audio>
+  <!-- Start HangmanGam -->
+  <div class="container">
+    <div class="hangmanContent">
+      <div class="popUpContainer">
+        <div class="popUp">
+          <span class="header">
+            <i></i>
+          </span>
+          <div class="body">
+            <p class="text"></p>
+          </div>
+          <div class="footer">
+            <button class="btn btn-primary">Try Again</button>
+          </div>
+        </div>
+      </div>
+      <div class="game_info">
+        <div class="game_name">Hangman</div>
+        <div class="category">
+          Word From:<span></span>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="hangman_draw">
+            <div class="the_draw">
+              <div class="stand"></div>
+              <div class="hange"></div>
+              <div class="rope"></div>
+              <div class="man">
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="hands"></div>
+                <div class="legs"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="letters">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="letter_guess"></div>
+    </div>
+  </div>
+  <!-- End HangmanGam -->
+
+
+
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/hangman.js"></script>
+</body>
+
+</html>
