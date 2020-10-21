@@ -35,7 +35,7 @@
         add_Data(q_obj[currentIndex], q_count);
 
         // Call CountDown Fucntion
-        count_Down(10, q_count);
+        count_Down(20, q_count);
       }
     };
 
@@ -66,7 +66,7 @@
 
     // CountDown
     clearInterval(countdown_interval);
-    count_Down(10, q_count);
+    count_Down(20, q_count);
 
     // Empty Data From Html
     quiz_area_container.innerHTML = "";
