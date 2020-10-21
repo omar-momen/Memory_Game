@@ -842,9 +842,8 @@ body.hangman .hangmanContent .letter_guess span.space_letter::before {
 /******* End hangmanGame *******/
 /******* Start App Quiz *******/
 .quiz_app {
-  width: 800px;
   padding: 15px;
-  margin: 20px auto;
+  margin-top: 20px;
   background-color: #f8f8f8;
 }
 .quiz_app .qiuz_info {
