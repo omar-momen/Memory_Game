@@ -5,6 +5,7 @@
 
 body {
   font-family: Tahoma, Arial;
+  overflow-x: hidden;
 }
 body.noClick {
   pointer-events: none;

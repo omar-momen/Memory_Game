@@ -3,6 +3,7 @@
 }
 body {
   font-family: Tahoma, Arial;
+  overflow-x: hidden;
   &.noClick {
     pointer-events: none;
   }
