@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #333;
   font-family: Tahoma, Arial;
   &.noClick {
     pointer-events: none;
@@ -761,3 +760,128 @@ body.hangman {
   }
 }
 /******* End hangmanGame *******/
+
+/******* Start App Quiz *******/
+.quiz_app {
+  width: 800px;
+  padding: 15px;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  .qiuz_info {
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 10px;
+    .category {
+      flex: 1;
+      color: #777;
+      span {
+        color: #007bff;
+        font-weight: bold;
+      }
+    }
+    .questions_count {
+      flex: 1;
+      text-align: right;
+      color: #777;
+      span {
+        color: #007bff;
+        font-weight: bold;
+      }
+    }
+  }
+  .quiz_area {
+    background: #fff;
+    padding: 20px;
+    h2.question {
+      margin: 0;
+      color: #565656;
+    }
+  }
+  .answers {
+    background: #fff;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 10px;
+    .answer {
+      background-color: #f9f9f9;
+      padding: 10px;
+      &:not(:last-child) {
+        border-bottom: 1px solid #dadada;
+      }
+      input {
+        cursor: pointer;
+        &:checked {
+          & + label {
+            color: #007bff;
+          }
+        }
+      }
+      label {
+        cursor: pointer;
+        font-weight: bold;
+        color: #777;
+        margin-left: 10px;
+      }
+    }
+  }
+  button.submit {
+    background: #007bff;
+    color: #fff;
+    width: 100%;
+    margin: 10px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .bullets {
+    display: flex;
+    background-color: #fff;
+    padding: 15px;
+    .spans {
+      flex: 1;
+      span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #adb5bd;
+        border-radius: 50%;
+        margin: 0 2px;
+        &.on {
+          background-color: #007bff;
+        }
+      }
+    }
+    .countdown {
+      color: #777;
+      span.minutes {
+      }
+      span.secons {
+      }
+    }
+  }
+  .results {
+    margin: 10px 10px 0;
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    border: 2px dashed #d2cdcd;
+    display: none;
+    span {
+      font-weight: bold;
+      &.perfect {
+        color: #007bff;
+      }
+      &.good {
+        color: #28a745;
+      }
+      &.bad {
+        color: #dc3545;
+      }
+    }
+  }
+}
+/******* End App Quiz *******/
