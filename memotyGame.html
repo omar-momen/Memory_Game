@@ -13,167 +13,169 @@
 <body>
 
 
-  <!-- Start Memery Game -->
-  <!-- Sounds -->
-  <audio id="success" src="audio/Memory_Game/success.mp3" preload="auto"></audio>
-  <audio id="fail" src="audio/Memory_Game/fail.mp3" preload="auto"></audio>
-  <audio id="drums" src="audio/Memory_Game/drums.mp3" preload="auto"></audio>
-  <audio id="GameEndSuccess" src="audio/Memory_Game/GameEndSuccess.mp3" preload="auto"></audio>
-  <audio id="EndgameFail" src="audio/Memory_Game/EndgameFail.mp3" preload="auto"></audio>
-  <div class="autor">
-    <h1>Memory Game</h1>
-    <p>by: Omar_Momen</p>
-  </div>
-  <div class="start_game">
-    <span>Start Game</span>
-  </div>
   <div class="memory_game">
-    <div class="info">
-      <div class="name">
-        Hello: <span id="WiningPlayerName"></span>
+    <!-- Start Memery Game -->
+    <!-- Sounds -->
+    <audio id="success" src="audio/Memory_Game/success.mp3" preload="auto"></audio>
+    <audio id="fail" src="audio/Memory_Game/fail.mp3" preload="auto"></audio>
+    <audio id="drums" src="audio/Memory_Game/drums.mp3" preload="auto"></audio>
+    <audio id="GameEndSuccess" src="audio/Memory_Game/GameEndSuccess.mp3" preload="auto"></audio>
+    <audio id="EndgameFail" src="audio/Memory_Game/EndgameFail.mp3" preload="auto"></audio>
+    <div class="autor">
+      <h1>Memory Game</h1>
+      <p>by: Omar_Momen</p>
+    </div>
+    <div class="start_game">
+      <span>Start Game</span>
+    </div>
+    <div class="memory_game">
+      <div class="info">
+        <div class="name">
+          Hello: <span id="WiningPlayerName"></span>
+        </div>
+        <div class="timer">
+          <span id="time">00:00</span>
+        </div>
+        <div class="wrongTries">
+          Wrong Tries: <span id="wrongTries">0</span>
+        </div>
       </div>
-      <div class="timer">
-        <span id="time">00:00</span>
+      <div class="game_blocks">
+        <div class="game_block" data-technology="angular">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/angular.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="angular">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/angular.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="css3">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/css3.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="css3">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/css3.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="github">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/github.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="github">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/github.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="gulp">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/gulp.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="gulp">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/gulp.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="html5">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/html5.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="html5">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/html5.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="jest">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/jest.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="jest">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/jest.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="mongodb">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/mongodb.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="mongodb">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/mongodb.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="python">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/python.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="python">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/python.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="react">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/react.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="react">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/react.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="vue">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/vue.png" alt="">
+          </div>
+        </div>
+        <div class="game_block" data-technology="vue">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="images/Memory_Game/vue.png" alt="">
+          </div>
+        </div>
       </div>
-      <div class="wrongTries">
-        Wrong Tries: <span id="wrongTries">0</span>
+      <div id="previousWiningPlayers" class="previousWiningPlayers">
       </div>
     </div>
-    <div class="game_blocks">
-      <div class="game_block" data-technology="angular">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/angular.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="angular">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/angular.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="css3">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/css3.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="css3">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/css3.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="github">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/github.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="github">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/github.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="gulp">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/gulp.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="gulp">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/gulp.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="html5">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/html5.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="html5">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/html5.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="jest">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/jest.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="jest">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/jest.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="mongodb">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/mongodb.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="mongodb">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/mongodb.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="python">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/python.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="python">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/python.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="react">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/react.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="react">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/react.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="vue">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/vue.png" alt="">
-        </div>
-      </div>
-      <div class="game_block" data-technology="vue">
-        <div class="face front"></div>
-        <div class="face back">
-          <img src="images/Memory_Game/vue.png" alt="">
+    <div id="endGamePopup" class="endGamePopup">
+      <div class="popup">
+        <p class="header">Game Over</p>
+        <p id="message" class="message"></p>
+        <div class="footer">
+          <button id="playAgain" class="btn btn-info">play Again</button>
         </div>
       </div>
     </div>
-    <div id="previousWiningPlayers" class="previousWiningPlayers">
-    </div>
+    <!-- End Memery Game -->
   </div>
-  <div id="endGamePopup" class="endGamePopup">
-    <div class="popup">
-      <p class="header">Game Over</p>
-      <p id="message" class="message"></p>
-      <div class="footer">
-        <button id="playAgain" class="btn btn-info">play Again</button>
-      </div>
-    </div>
-  </div>
-  <!-- End Memery Game -->
 
 
 

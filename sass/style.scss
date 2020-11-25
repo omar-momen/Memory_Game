@@ -1,256 +1,223 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: Tahoma, Arial;
-  overflow-x: hidden;
-  &.noClick {
-    pointer-events: none;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  a.home {
-    display: block;
-    margin: 10px;
-  }
-}
-/******* Start Scrollbar *******/
-.scroller {
-  overflow-y: scroll;
-  scrollbar-color: #009578 transparent;
-  scrollbar-width: thin;
-}
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #009578;
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: #6dcdb1;
-}
-/******* End Scrollbar *******/
+@import "pages/weight_Project.scss";
+@import "pages/pdfLoder.scss";
+@import "pages/state_search.scss";
+@import "others/global.scss";
 
 /******* Start Memory_Game *******/
-.autor {
-  padding: 50px;
-  text-align: center;
-  background-color: #333;
-  width: 50%;
-  margin: 100px auto;
-  h1 {
-    color: #d7d7d7;
-    font-size: 3em;
-  }
-  @media (max-width: 500px) {
-    padding: 18px;
-    h1 {
-      font-size: 25px;
-    }
-  }
-  p {
-    color: #00e500;
-  }
-}
-.start_game {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #007bffb3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  span {
-    color: #fff;
-    background: #f44336;
-    padding: 15px 30px;
-    font-size: 40px;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-}
 .memory_game {
-  width: 60%;
-  margin: 100px auto;
-  .info {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background: #f0eeee;
-    border: 2px solid #00f;
-    margin: 10px 0;
-    @media (max-width: 400px) {
-      display: block;
-      & > * {
-        margin: 10px 0;
+  .autor {
+    padding: 50px;
+    text-align: center;
+    background-color: #333;
+    width: 50%;
+    margin: 100px auto;
+    h1 {
+      color: #d7d7d7;
+      font-size: 3em;
+    }
+    @media (max-width: 500px) {
+      padding: 18px;
+      h1 {
+        font-size: 25px;
       }
     }
-    .name {
-      span {
-        color: blue;
-        font-weight: bold;
-      }
-    }
-    .wrongTries {
-      span {
-        color: red;
-        font-weight: bold;
-      }
+    p {
+      color: #00e500;
     }
   }
-  .game_blocks {
+  .start_game {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #007bffb3;
     display: flex;
-    flex-wrap: wrap;
-    width: fit-content;
-    margin: 0 auto;
-    &.noClick {
-      pointer-events: none;
-    }
-    .game_block {
-      width: 150px;
-      height: 150px;
-      line-height: 150px;
-      @media (max-width: 1200px) {
-        width: 80px;
-        height: 80px;
-        line-height: 80px;
-      }
-      @media (max-width: 900px) {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-      }
-      @media (max-width: 300px) {
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-      }
-      margin: 10px;
-      cursor: pointer;
-      transform-style: preserve-3d;
-      transition: all 0.5s linear;
-      position: relative;
-      &.noClick {
-        pointer-events: none;
-      }
-      &.isFlibbed,
-      &.has_match {
-        transform: rotateY(180deg);
-      }
-      .face {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-      }
-      .front {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        z-index: 2;
-        border: 2px solid #00f;
-        backface-visibility: hidden;
-        &:after {
-          content: "?";
-          font-size: 40px;
-        }
-      }
-      .back {
-        background-color: #607d8b;
-        z-index: 1;
-        transform: rotateY(180deg);
-        backface-visibility: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-  }
-  .previousWiningPlayers {
-    margin: 10px 0;
-    background: #eee;
-    padding: 10px;
-    display: none;
-    &.ok {
-      display: block;
-    }
-    .player {
-      margin: 10px 0;
-      display: flex;
-      justify-content: space-around;
-      background: #333;
-      padding: 5px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    span {
       color: #fff;
-      border-radius: 10px;
-      & > span {
-        color: #c0c0cd;
+      background: #f44336;
+      padding: 15px 30px;
+      font-size: 40px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+  .memory_game {
+    width: 60%;
+    margin: 100px auto;
+    .info {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background: #f0eeee;
+      border: 2px solid #00f;
+      margin: 10px 0;
+      @media (max-width: 400px) {
+        display: block;
+        & > * {
+          margin: 10px 0;
+        }
+      }
+      .name {
         span {
-          color: #fff;
+          color: blue;
+          font-weight: bold;
+        }
+      }
+      .wrongTries {
+        span {
+          color: red;
           font-weight: bold;
         }
       }
     }
+    .game_blocks {
+      display: flex;
+      flex-wrap: wrap;
+      width: fit-content;
+      margin: 0 auto;
+      &.noClick {
+        pointer-events: none;
+      }
+      .game_block {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        @media (max-width: 1200px) {
+          width: 80px;
+          height: 80px;
+          line-height: 80px;
+        }
+        @media (max-width: 900px) {
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+        }
+        @media (max-width: 300px) {
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+        }
+        margin: 10px;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transition: all 0.5s linear;
+        position: relative;
+        &.noClick {
+          pointer-events: none;
+        }
+        &.isFlibbed,
+        &.has_match {
+          transform: rotateY(180deg);
+        }
+        .face {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+        .front {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          z-index: 2;
+          border: 2px solid #00f;
+          backface-visibility: hidden;
+          &:after {
+            content: "?";
+            font-size: 40px;
+          }
+        }
+        .back {
+          background-color: #607d8b;
+          z-index: 1;
+          transform: rotateY(180deg);
+          backface-visibility: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .previousWiningPlayers {
+      margin: 10px 0;
+      background: #eee;
+      padding: 10px;
+      display: none;
+      &.ok {
+        display: block;
+      }
+      .player {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        background: #333;
+        padding: 5px;
+        color: #fff;
+        border-radius: 10px;
+        & > span {
+          color: #c0c0cd;
+          span {
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
-}
-.endGamePopup {
-  position: fixed;
-  display: flex;
-  opacity: 0;
-  transition: all 0.3s linear;
-  justify-content: center;
-  align-items: center;
-  background: #0000009e;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  .popup {
-    background-color: #fff;
-    .header {
-      color: #333;
-      text-align: center;
-      background-color: #eee;
-      padding: 10px;
-      font-size: 20px;
-      box-shadow: 0 0 5px #333;
-    }
-    .message {
-      color: red;
-      font-size: 40px;
-      text-align: center;
-      font-weight: bold;
-      padding: 40px;
-    }
-    .footer {
-      text-align: center;
-      background: #cfcfcf;
-      padding: 10px;
+  .endGamePopup {
+    position: fixed;
+    display: flex;
+    opacity: 0;
+    transition: all 0.3s linear;
+    justify-content: center;
+    align-items: center;
+    background: #0000009e;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    .popup {
+      background-color: #fff;
+      .header {
+        color: #333;
+        text-align: center;
+        background-color: #eee;
+        padding: 10px;
+        font-size: 20px;
+        box-shadow: 0 0 5px #333;
+      }
+      .message {
+        color: red;
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+        padding: 40px;
+      }
+      .footer {
+        text-align: center;
+        background: #cfcfcf;
+        padding: 10px;
+      }
     }
   }
 }
 /******* End Memory_Game  *******/
 
 /* Start Todo list */
-h1 {
-  text-align: center;
-  margin-top: 50px;
-}
 .todo_container {
   width: 60%;
   margin: 50px auto;
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
   .add_todo {
     padding: 10px 15px;
     background-color: #009688;
@@ -392,86 +359,88 @@ h1 {
 /* End Todo list */
 
 /******* Start GitHib Repso *******/
-.get_repos_container {
-  width: 70%;
-  margin: 0 auto 50px;
-  .get_repos {
-    padding: 15px;
-    background-color: #eee;
-    display: flex;
-    input {
-      flex-grow: 1;
-      padding: 10px;
-      color: #333;
-      border: none;
-      height: 50px;
-      &:focus {
-        outline: 2px solid #17a2b8;
-      }
-    }
-    button.get_butt {
-      height: 50px;
-      background-color: #17a2b8;
-      color: #fff;
-      border: none;
-      outline: none;
-      text-align: center;
-      line-height: 50px;
-      margin-left: 10px;
-    }
-    @media (max-width: 510px) {
-      flex-direction: column;
-      button.get_butt {
-        margin: 10px auto 0;
-        width: 50%;
-        height: auto;
-      }
-    }
-  }
-  .show_repos {
-    background-color: #e0e0e0;
-    padding: 15px;
-    max-height: 500px;
-    overflow-y: scroll;
-    .error {
-      background-color: #dd0000;
-      padding-bottom: 5px;
-      display: block;
-      padding: 5px;
-      text-align: center;
-      color: #fff;
-    }
-    .no_repos_msg {
-      background-color: #009bdd;
-    }
-    .repo {
-      padding: 10px;
-      background-color: #fff;
-      color: #fff;
+.github_repos {
+  .get_repos_container {
+    width: 70%;
+    margin: 0 auto 50px;
+    .get_repos {
+      padding: 15px;
+      background-color: #eee;
       display: flex;
-      justify-content: space-between;
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-      span {
+      input {
+        flex-grow: 1;
+        padding: 10px;
         color: #333;
-      }
-      a {
-        background-color: #e91e63;
-        display: inline-block;
-        border-radius: 20px;
-        width: 100px;
-        color: #fff;
-        text-align: center;
-        &:hover {
-          text-decoration: none;
+        border: none;
+        height: 50px;
+        &:focus {
+          outline: 2px solid #17a2b8;
         }
+      }
+      button.get_butt {
+        height: 50px;
+        background-color: #17a2b8;
+        color: #fff;
+        border: none;
+        outline: none;
+        text-align: center;
+        line-height: 50px;
+        margin-left: 10px;
       }
       @media (max-width: 510px) {
         flex-direction: column;
-        a {
+        button.get_butt {
           margin: 10px auto 0;
           width: 50%;
+          height: auto;
+        }
+      }
+    }
+    .show_repos {
+      background-color: #e0e0e0;
+      padding: 15px;
+      max-height: 500px;
+      overflow-y: scroll;
+      .error {
+        background-color: #dd0000;
+        padding-bottom: 5px;
+        display: block;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+      }
+      .no_repos_msg {
+        background-color: #009bdd;
+      }
+      .repo {
+        padding: 10px;
+        background-color: #fff;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        span {
+          color: #333;
+        }
+        a {
+          background-color: #e91e63;
+          display: inline-block;
+          border-radius: 20px;
+          width: 100px;
+          color: #fff;
+          text-align: center;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        @media (max-width: 510px) {
+          flex-direction: column;
+          a {
+            margin: 10px auto 0;
+            width: 50%;
+          }
         }
       }
     }
@@ -480,7 +449,7 @@ h1 {
 /******* End GitHib Repso *******/
 
 /******* Start hangmanGame *******/
-body.hangman {
+.hangman_game {
   background: #fff;
   hr {
     border: 1px solid #eee;

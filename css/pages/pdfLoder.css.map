@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,YAAG;EACD,KAAK,EAAE,GAAG",
+"sources": ["../../sass/pages/pdfLoder.scss"],
+"names": [],
+"file": "pdfLoder.css"
+}

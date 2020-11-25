@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF</title>
+  <link rel="stylesheet" href="../css/libs/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/libs/all.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="pdfLoder">
+    <h1 class="text-center">PDF Loder</h1>
+    <div class="top_bar">
+      <button class="btn" id="prev_page">
+        <i class="fas fa-arrow-circle-left"></i> Prev Page
+      </button>
+      <button class="btn" id="next_page">
+        Next Page <i class="fas fa-arrow-circle-right"></i>
+      </button>
+      <div class="page_info">
+        Page <span id="page_num">2</span> Of <span id="page_count">5</span>
+      </div>
+      <canvas id="pdf_render"></canvas>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+  <script src="../js/pages/pdfLoder.js"></script>
+</body>
+
+</html>

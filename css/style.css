@@ -1,3 +1,12 @@
+body .weight_counter {
+  background: #333;
+  color: #fff;
+}
+
+.pdfLoder h1 {
+  color: red;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -46,30 +55,29 @@ body a.home {
 
 /******* End Scrollbar *******/
 /******* Start Memory_Game *******/
-.autor {
+.memory_game .autor {
   padding: 50px;
   text-align: center;
   background-color: #333;
   width: 50%;
   margin: 100px auto;
 }
-.autor h1 {
+.memory_game .autor h1 {
   color: #d7d7d7;
   font-size: 3em;
 }
 @media (max-width: 500px) {
-  .autor {
+  .memory_game .autor {
     padding: 18px;
   }
-  .autor h1 {
+  .memory_game .autor h1 {
     font-size: 25px;
   }
 }
-.autor p {
+.memory_game .autor p {
   color: #00e500;
 }
-
-.start_game {
+.memory_game .start_game {
   position: fixed;
   top: 0;
   left: 0;
@@ -87,7 +95,7 @@ body a.home {
           align-items: center;
   z-index: 100;
 }
-.start_game span {
+.memory_game .start_game span {
   color: #fff;
   background: #f44336;
   padding: 15px 30px;
@@ -95,12 +103,11 @@ body a.home {
   border-radius: 20px;
   cursor: pointer;
 }
-
-.memory_game {
+.memory_game .memory_game {
   width: 60%;
   margin: 100px auto;
 }
-.memory_game .info {
+.memory_game .memory_game .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,22 +120,22 @@ body a.home {
   margin: 10px 0;
 }
 @media (max-width: 400px) {
-  .memory_game .info {
+  .memory_game .memory_game .info {
     display: block;
   }
-  .memory_game .info > * {
+  .memory_game .memory_game .info > * {
     margin: 10px 0;
   }
 }
-.memory_game .info .name span {
+.memory_game .memory_game .info .name span {
   color: blue;
   font-weight: bold;
 }
-.memory_game .info .wrongTries span {
+.memory_game .memory_game .info .wrongTries span {
   color: red;
   font-weight: bold;
 }
-.memory_game .game_blocks {
+.memory_game .memory_game .game_blocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,10 +146,10 @@ body a.home {
   width: fit-content;
   margin: 0 auto;
 }
-.memory_game .game_blocks.noClick {
+.memory_game .memory_game .game_blocks.noClick {
   pointer-events: none;
 }
-.memory_game .game_blocks .game_block {
+.memory_game .memory_game .game_blocks .game_block {
   width: 150px;
   height: 150px;
   line-height: 150px;
@@ -155,41 +162,41 @@ body a.home {
   position: relative;
 }
 @media (max-width: 1200px) {
-  .memory_game .game_blocks .game_block {
+  .memory_game .memory_game .game_blocks .game_block {
     width: 80px;
     height: 80px;
     line-height: 80px;
   }
 }
 @media (max-width: 900px) {
-  .memory_game .game_blocks .game_block {
+  .memory_game .memory_game .game_blocks .game_block {
     width: 50px;
     height: 50px;
     line-height: 50px;
   }
 }
 @media (max-width: 300px) {
-  .memory_game .game_blocks .game_block {
+  .memory_game .memory_game .game_blocks .game_block {
     width: 35px;
     height: 35px;
     line-height: 35px;
   }
 }
-.memory_game .game_blocks .game_block.noClick {
+.memory_game .memory_game .game_blocks .game_block.noClick {
   pointer-events: none;
 }
-.memory_game .game_blocks .game_block.isFlibbed, .memory_game .game_blocks .game_block.has_match {
+.memory_game .memory_game .game_blocks .game_block.isFlibbed, .memory_game .memory_game .game_blocks .game_block.has_match {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
-.memory_game .game_blocks .game_block .face {
+.memory_game .memory_game .game_blocks .game_block .face {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
 }
-.memory_game .game_blocks .game_block .front {
+.memory_game .memory_game .game_blocks .game_block .front {
   background-color: #333;
   color: #fff;
   text-align: center;
@@ -198,11 +205,11 @@ body a.home {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-.memory_game .game_blocks .game_block .front:after {
+.memory_game .memory_game .game_blocks .game_block .front:after {
   content: "?";
   font-size: 40px;
 }
-.memory_game .game_blocks .game_block .back {
+.memory_game .memory_game .game_blocks .game_block .back {
   background-color: #607d8b;
   z-index: 1;
   -webkit-transform: rotateY(180deg);
@@ -210,20 +217,20 @@ body a.home {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-.memory_game .game_blocks .game_block .back img {
+.memory_game .memory_game .game_blocks .game_block .back img {
   width: 100%;
   height: 100%;
 }
-.memory_game .previousWiningPlayers {
+.memory_game .memory_game .previousWiningPlayers {
   margin: 10px 0;
   background: #eee;
   padding: 10px;
   display: none;
 }
-.memory_game .previousWiningPlayers.ok {
+.memory_game .memory_game .previousWiningPlayers.ok {
   display: block;
 }
-.memory_game .previousWiningPlayers .player {
+.memory_game .memory_game .previousWiningPlayers .player {
   margin: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,15 +242,14 @@ body a.home {
   color: #fff;
   border-radius: 10px;
 }
-.memory_game .previousWiningPlayers .player > span {
+.memory_game .memory_game .previousWiningPlayers .player > span {
   color: #c0c0cd;
 }
-.memory_game .previousWiningPlayers .player > span span {
+.memory_game .memory_game .previousWiningPlayers .player > span span {
   color: #fff;
   font-weight: bold;
 }
-
-.endGamePopup {
+.memory_game .endGamePopup {
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,10 +270,10 @@ body a.home {
   height: 100%;
   z-index: -1;
 }
-.endGamePopup .popup {
+.memory_game .endGamePopup .popup {
   background-color: #fff;
 }
-.endGamePopup .popup .header {
+.memory_game .endGamePopup .popup .header {
   color: #333;
   text-align: center;
   background-color: #eee;
@@ -276,14 +282,14 @@ body a.home {
   -webkit-box-shadow: 0 0 5px #333;
           box-shadow: 0 0 5px #333;
 }
-.endGamePopup .popup .message {
+.memory_game .endGamePopup .popup .message {
   color: red;
   font-size: 40px;
   text-align: center;
   font-weight: bold;
   padding: 40px;
 }
-.endGamePopup .popup .footer {
+.memory_game .endGamePopup .popup .footer {
   text-align: center;
   background: #cfcfcf;
   padding: 10px;
@@ -291,14 +297,13 @@ body a.home {
 
 /******* End Memory_Game  *******/
 /* Start Todo list */
-h1 {
-  text-align: center;
-  margin-top: 50px;
-}
-
 .todo_container {
   width: 60%;
   margin: 50px auto;
+}
+.todo_container h1 {
+  text-align: center;
+  margin-top: 50px;
 }
 .todo_container .add_todo {
   padding: 10px 15px;
@@ -456,18 +461,18 @@ h1 {
 
 /* End Todo list */
 /******* Start GitHib Repso *******/
-.get_repos_container {
+.github_repos .get_repos_container {
   width: 70%;
   margin: 0 auto 50px;
 }
-.get_repos_container .get_repos {
+.github_repos .get_repos_container .get_repos {
   padding: 15px;
   background-color: #eee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.get_repos_container .get_repos input {
+.github_repos .get_repos_container .get_repos input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -476,10 +481,10 @@ h1 {
   border: none;
   height: 50px;
 }
-.get_repos_container .get_repos input:focus {
+.github_repos .get_repos_container .get_repos input:focus {
   outline: 2px solid #17a2b8;
 }
-.get_repos_container .get_repos button.get_butt {
+.github_repos .get_repos_container .get_repos button.get_butt {
   height: 50px;
   background-color: #17a2b8;
   color: #fff;
@@ -490,25 +495,25 @@ h1 {
   margin-left: 10px;
 }
 @media (max-width: 510px) {
-  .get_repos_container .get_repos {
+  .github_repos .get_repos_container .get_repos {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .get_repos_container .get_repos button.get_butt {
+  .github_repos .get_repos_container .get_repos button.get_butt {
     margin: 10px auto 0;
     width: 50%;
     height: auto;
   }
 }
-.get_repos_container .show_repos {
+.github_repos .get_repos_container .show_repos {
   background-color: #e0e0e0;
   padding: 15px;
   max-height: 500px;
   overflow-y: scroll;
 }
-.get_repos_container .show_repos .error {
+.github_repos .get_repos_container .show_repos .error {
   background-color: #dd0000;
   padding-bottom: 5px;
   display: block;
@@ -516,10 +521,10 @@ h1 {
   text-align: center;
   color: #fff;
 }
-.get_repos_container .show_repos .no_repos_msg {
+.github_repos .get_repos_container .show_repos .no_repos_msg {
   background-color: #009bdd;
 }
-.get_repos_container .show_repos .repo {
+.github_repos .get_repos_container .show_repos .repo {
   padding: 10px;
   background-color: #fff;
   color: #fff;
@@ -530,13 +535,13 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.get_repos_container .show_repos .repo:not(:last-child) {
+.github_repos .get_repos_container .show_repos .repo:not(:last-child) {
   margin-bottom: 10px;
 }
-.get_repos_container .show_repos .repo span {
+.github_repos .get_repos_container .show_repos .repo span {
   color: #333;
 }
-.get_repos_container .show_repos .repo a {
+.github_repos .get_repos_container .show_repos .repo a {
   background-color: #e91e63;
   display: inline-block;
   border-radius: 20px;
@@ -544,17 +549,17 @@ h1 {
   color: #fff;
   text-align: center;
 }
-.get_repos_container .show_repos .repo a:hover {
+.github_repos .get_repos_container .show_repos .repo a:hover {
   text-decoration: none;
 }
 @media (max-width: 510px) {
-  .get_repos_container .show_repos .repo {
+  .github_repos .get_repos_container .show_repos .repo {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .get_repos_container .show_repos .repo a {
+  .github_repos .get_repos_container .show_repos .repo a {
     margin: 10px auto 0;
     width: 50%;
   }
@@ -562,16 +567,16 @@ h1 {
 
 /******* End GitHib Repso *******/
 /******* Start hangmanGame *******/
-body.hangman {
+.hangman_game {
   background: #fff;
 }
-body.hangman hr {
+.hangman_game hr {
   border: 1px solid #eee;
 }
-body.hangman .hangmanContent {
+.hangman_game .hangmanContent {
   margin: 50px 0 0 0;
 }
-body.hangman .hangmanContent .popUpContainer {
+.hangman_game .hangmanContent .popUpContainer {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -581,7 +586,7 @@ body.hangman .hangmanContent .popUpContainer {
   z-index: 10;
   display: none;
 }
-body.hangman .hangmanContent .popUpContainer .popUp {
+.hangman_game .hangmanContent .popUpContainer .popUp {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -594,75 +599,75 @@ body.hangman .hangmanContent .popUpContainer .popUp {
           transform: translate(-50%, -50%);
   text-align: center;
 }
-body.hangman .hangmanContent .popUpContainer .popUp .header {
+.hangman_game .hangmanContent .popUpContainer .popUp .header {
   display: inline-block;
   margin-bottom: 10px;
 }
-body.hangman .hangmanContent .popUpContainer .popUp .header i {
+.hangman_game .hangmanContent .popUpContainer .popUp .header i {
   font-size: 30px;
 }
-body.hangman .hangmanContent .popUpContainer .popUp .header i.success {
+.hangman_game .hangmanContent .popUpContainer .popUp .header i.success {
   color: green;
 }
-body.hangman .hangmanContent .popUpContainer .popUp .header i.fail {
+.hangman_game .hangmanContent .popUpContainer .popUp .header i.fail {
   color: red;
 }
-body.hangman .hangmanContent .popUpContainer .popUp .body .text {
+.hangman_game .hangmanContent .popUpContainer .popUp .body .text {
   color: #333;
 }
-body.hangman .hangmanContent .game_info {
+.hangman_game .hangmanContent .game_info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-body.hangman .hangmanContent .game_info .game_name {
+.hangman_game .hangmanContent .game_info .game_name {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-body.hangman .hangmanContent .game_info .category {
+.hangman_game .hangmanContent .game_info .category {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: right;
 }
-body.hangman .hangmanContent .game_info .category span {
+.hangman_game .hangmanContent .game_info .category span {
   color: #e91e63;
   text-transform: uppercase;
   font-weight: bold;
 }
-body.hangman .hangmanContent .row .hangman_draw {
+.hangman_game .hangmanContent .row .hangman_draw {
   padding: 20px;
   background-color: #eee;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw {
   width: 60px;
   height: 250px;
   position: relative;
   border-bottom: 4px solid #222;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw.wrong_1 .stand {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw.wrong_1 .stand {
   display: block;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw.wrong_2 .hange {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw.wrong_2 .hange {
   display: block;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw.wrong_3 .rope {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw.wrong_3 .rope {
   display: block;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw.wrong_4 .man .head {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw.wrong_4 .man .head {
   display: block;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw.wrong_5 .man .body {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw.wrong_5 .man .body {
   display: block;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw.wrong_6 .man .hands {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw.wrong_6 .man .hands {
   display: block;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw.wrong_7 .man .legs {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw.wrong_7 .man .legs {
   display: block;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .stand {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .stand {
   position: absolute;
   height: 100%;
   width: 4px;
@@ -672,7 +677,7 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .stand {
           transform: translatex(-50%);
   display: none;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .hange {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .hange {
   width: 100px;
   background-color: #222;
   position: absolute;
@@ -681,7 +686,7 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .hange {
   top: 40px;
   display: none;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .hange::after {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .hange::after {
   content: "";
   position: absolute;
   background-color: #222;
@@ -690,7 +695,7 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .hange::after {
   right: 0;
   top: 0;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .rope {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .rope {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -700,7 +705,7 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .rope {
   top: 90px;
   display: none;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .man .head {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .man .head {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -710,7 +715,7 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .man .head {
   left: calc(50% + 75px);
   display: none;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .man .body {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .man .body {
   position: absolute;
   width: 4px;
   height: 90px;
@@ -719,10 +724,10 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .man .body {
   left: calc(50% + 98px);
   display: none;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .man .hands {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .man .hands {
   display: none;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .man .hands::before {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .man .hands::before {
   content: "";
   position: absolute;
   width: 50px;
@@ -733,7 +738,7 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .man .hands::before {
   -webkit-transform: rotate(139deg);
           transform: rotate(139deg);
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .man .hands::after {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .man .hands::after {
   content: "";
   position: absolute;
   width: 50px;
@@ -744,10 +749,10 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .man .hands::after {
   -webkit-transform: rotate(-139deg);
           transform: rotate(-139deg);
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .man .legs {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .man .legs {
   display: none;
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .man .legs::before {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .man .legs::before {
   content: "";
   position: absolute;
   width: 50px;
@@ -758,7 +763,7 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .man .legs::before {
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-body.hangman .hangmanContent .row .hangman_draw .the_draw .man .legs::after {
+.hangman_game .hangmanContent .row .hangman_draw .the_draw .man .legs::after {
   content: "";
   position: absolute;
   width: 50px;
@@ -769,13 +774,13 @@ body.hangman .hangmanContent .row .hangman_draw .the_draw .man .legs::after {
   -webkit-transform: rotate(-30deg);
   transform: rotate(-30deg);
 }
-body.hangman .hangmanContent .row .letters {
+.hangman_game .hangmanContent .row .letters {
   text-align: center;
   padding: 15px;
   width: 99%;
   margin: auto;
 }
-body.hangman .hangmanContent .row .letters .letter {
+.hangman_game .hangmanContent .row .letters .letter {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -788,18 +793,18 @@ body.hangman .hangmanContent .row .letters .letter {
   border-radius: 5px;
 }
 @media (max-width: 769px) {
-  body.hangman .hangmanContent .row .letters .letter {
+  .hangman_game .hangmanContent .row .letters .letter {
     width: 30px;
     height: 30px;
     line-height: 30px;
   }
 }
-body.hangman .hangmanContent .row .letters .letter.clicked {
+.hangman_game .hangmanContent .row .letters .letter.clicked {
   background-color: #333;
   opacity: 0.2;
   pointer-events: none;
 }
-body.hangman .hangmanContent .letter_guess {
+.hangman_game .hangmanContent .letter_guess {
   background-color: #eee;
   padding: 10px;
   display: -webkit-box;
@@ -809,7 +814,7 @@ body.hangman .hangmanContent .letter_guess {
       -ms-flex-pack: center;
           justify-content: center;
 }
-body.hangman .hangmanContent .letter_guess span {
+.hangman_game .hangmanContent .letter_guess span {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -823,16 +828,16 @@ body.hangman .hangmanContent .letter_guess span {
   font-weight: bold;
 }
 @media (max-width: 550px) {
-  body.hangman .hangmanContent .letter_guess span {
+  .hangman_game .hangmanContent .letter_guess span {
     margin: 0 5px;
   }
 }
-body.hangman .hangmanContent .letter_guess span.space_letter {
+.hangman_game .hangmanContent .letter_guess span.space_letter {
   background: transparent;
   border-bottom: none;
   position: relative;
 }
-body.hangman .hangmanContent .letter_guess span.space_letter::before {
+.hangman_game .hangmanContent .letter_guess span.space_letter::before {
   content: "";
   width: 20px;
   height: 4px;

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Tahoma, Arial;
+  overflow-x: hidden;
+  &.noClick {
+    pointer-events: none;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  a.home {
+    display: block;
+    margin: 10px;
+  }
+}
+/******* Start Scrollbar *******/
+.scroller {
+  overflow-y: scroll;
+  scrollbar-color: #009578 transparent;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #009578;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6dcdb1;
+}
+/******* End Scrollbar *******/
