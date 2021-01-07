@@ -4,43 +4,46 @@
   font-family: "Raleway", sans-serif; }
 
 body {
-  height: 100vh;
-  overflow: hidden;
   margin: 0;
-  background: #333 url(../images/joker.jpg) no-repeat center center/cover; }
-  body .container {
-    padding-left: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    body .container h1 {
-      font-size: 4.5em;
-      margin: 0;
-      color: #e1e1e1; }
-      body .container h1 span {
-        padding-left: 3px;
-        color: #bec51f; }
-        body .container h1 span .txt {
-          border-right: 4px solid #777; }
-    body .container h2 {
-      font-size: 3em;
-      color: #aaa;
-      margin: 5px 0; }
-    @media (max-width: 992px) {
-      body .container h1 {
-        font-size: 2em; }
-      body .container h2 {
-        font-size: 1.5em; } }
-    @media (max-width: 500px) {
-      body .container h1 {
-        font-size: 1.5em; }
-      body .container h2 {
-        font-size: 1em; } }
-    @media (max-width: 351px) {
-      body .container h1 {
-        font-size: 1.3em; }
-      body .container h2 {
-        font-size: 0.8em; } }
+  padding-left: 0; }
+  body .psedu_body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #333 url(../images/joker.jpg) no-repeat center center/cover; }
+    body .psedu_body .container {
+      padding-left: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      body .psedu_body .container h1 {
+        font-size: 4.5em;
+        margin: 0;
+        color: #e1e1e1; }
+        body .psedu_body .container h1 span {
+          padding-left: 3px;
+          color: #bec51f; }
+          body .psedu_body .container h1 span .txt {
+            border-right: 4px solid #777; }
+      body .psedu_body .container h2 {
+        font-size: 3em;
+        color: #aaa;
+        margin: 5px 0; }
+      @media (max-width: 992px) {
+        body .psedu_body .container h1 {
+          font-size: 2em; }
+        body .psedu_body .container h2 {
+          font-size: 1.5em; } }
+      @media (max-width: 500px) {
+        body .psedu_body .container h1 {
+          font-size: 1.5em; }
+        body .psedu_body .container h2 {
+          font-size: 1em; } }
+      @media (max-width: 351px) {
+        body .psedu_body .container h1 {
+          font-size: 1.3em; }
+        body .psedu_body .container h2 {
+          font-size: 0.8em; } }
 
 /*# sourceMappingURL=typeEffect.css.map */
