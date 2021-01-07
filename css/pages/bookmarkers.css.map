@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAII,0BAAK;EACH,gBAAgB,EAAE,IAAI",
+"sources": ["../../sass/pages/bookmarkers.scss"],
+"names": [],
+"file": "bookmarkers.css"
+}

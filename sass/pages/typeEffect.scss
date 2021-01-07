@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:wght@300&display=swap");
+* {
+  font-family: "Kurale", serif;
+  font-family: "Raleway", sans-serif;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background: #333 url(../images/joker.jpg) no-repeat center center / cover;
+  .container {
+    padding-left: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-size: 4.5em;
+      margin: 0;
+      color: #e1e1e1;
+      span {
+        padding-left: 3px;
+        color: #bec51f;
+        .txt {
+          border-right: 4px solid #777;
+        }
+      }
+    }
+    h2 {
+      font-size: 3em;
+      color: #aaa;
+      margin: 5px 0;
+    }
+    @media (max-width: 992px) {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+    }
+    @media (max-width: 351px) {
+      h1 {
+        font-size: 1.3em;
+      }
+      h2 {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
