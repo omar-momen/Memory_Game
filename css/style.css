@@ -14,16 +14,30 @@ body {
   margin: 0;
   padding-left: 0; }
   body .psedu_body {
+    position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
     background: #333 url(../images/joker.jpg) no-repeat center center/cover; }
+    body .psedu_body .overlay {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.37); }
+    @media (max-width: 992px) {
+      body .psedu_body {
+        background-position: right; } }
     body .psedu_body .container {
+      position: relative;
       padding-left: 20px;
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center; }
+      justify-content: center;
+      z-index: 2; }
       body .psedu_body .container h1 {
         font-size: 4.5em;
         margin: 0;
