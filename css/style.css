@@ -6,10 +6,6 @@ body .weight_counter {
 .pdfLoder h1 {
   color: red; }
 
-* {
-  font-family: "Kurale", serif;
-  font-family: "Raleway", sans-serif; }
-
 body {
   margin: 0;
   padding-left: 0; }
@@ -19,6 +15,9 @@ body {
     width: 100%;
     overflow: hidden;
     background: #333 url(../images/joker.jpg) no-repeat center center/cover; }
+    body .psedu_body * {
+      font-family: "Kurale", serif;
+      font-family: "Raleway", sans-serif; }
     body .psedu_body .overlay {
       z-index: 1;
       position: absolute;
@@ -69,6 +68,229 @@ body {
 
 .bookmarkers .content form {
   background-color: #eee; }
+
+body {
+  background-color: #eee; }
+
+#Todo_List h2,
+#Todo_List2 h2 {
+  color: #cc9a9a; }
+#Todo_List .container .form,
+#Todo_List2 .container .form {
+  margin: 0 auto; }
+  @media (min-width: 992px) {
+    #Todo_List .container .form,
+    #Todo_List2 .container .form {
+      width: 50%; } }
+  #Todo_List .container .form .input-group,
+  #Todo_List2 .container .form .input-group {
+    background-color: #ffffffba;
+    padding: 7px 3px; }
+    #Todo_List .container .form .input-group .input-group-prepend .checkbox,
+    #Todo_List2 .container .form .input-group .input-group-prepend .checkbox {
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #Todo_List .container .form .input-group .input-group-prepend .checkbox input,
+      #Todo_List2 .container .form .input-group .input-group-prepend .checkbox input {
+        -webkit-appearance: none; }
+        #Todo_List .container .form .input-group .input-group-prepend .checkbox input:checked + label i,
+        #Todo_List2 .container .form .input-group .input-group-prepend .checkbox input:checked + label i {
+          color: #333; }
+      #Todo_List .container .form .input-group .input-group-prepend .checkbox label,
+      #Todo_List2 .container .form .input-group .input-group-prepend .checkbox label {
+        margin: 0;
+        cursor: pointer; }
+        #Todo_List .container .form .input-group .input-group-prepend .checkbox label i,
+        #Todo_List2 .container .form .input-group .input-group-prepend .checkbox label i {
+          color: #c2c2c2; }
+    #Todo_List .container .form .input-group input,
+    #Todo_List2 .container .form .input-group input {
+      border: none;
+      background: transparent; }
+      #Todo_List .container .form .input-group input:focus,
+      #Todo_List2 .container .form .input-group input:focus {
+        box-shadow: none; }
+      #Todo_List .container .form .input-group input::placeholder,
+      #Todo_List2 .container .form .input-group input::placeholder {
+        color: #e6e6e6; }
+  #Todo_List .container .form .todos_list .todo,
+  #Todo_List2 .container .form .todos_list .todo {
+    position: relative; }
+    #Todo_List .container .form .todos_list .todo.editing .edit,
+    #Todo_List2 .container .form .todos_list .todo.editing .edit {
+      display: block; }
+    #Todo_List .container .form .todos_list .todo .view,
+    #Todo_List2 .container .form .todos_list .todo .view {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 0 5px;
+      border-top: 1px solid #e6e6e6; }
+      #Todo_List .container .form .todos_list .todo .view .checkbox,
+      #Todo_List2 .container .form .todos_list .todo .view .checkbox {
+        width: 40px;
+        margin-right: 10px;
+        padding: 6px 5px; }
+        #Todo_List .container .form .todos_list .todo .view .checkbox input,
+        #Todo_List2 .container .form .todos_list .todo .view .checkbox input {
+          -webkit-appearance: none; }
+          #Todo_List .container .form .todos_list .todo .view .checkbox input:checked + label,
+          #Todo_List2 .container .form .todos_list .todo .view .checkbox input:checked + label {
+            border-color: green; }
+            #Todo_List .container .form .todos_list .todo .view .checkbox input:checked + label::after,
+            #Todo_List2 .container .form .todos_list .todo .view .checkbox input:checked + label::after {
+              transform: translate(-50%, -50%) scale(1); }
+        #Todo_List .container .form .todos_list .todo .view .checkbox label,
+        #Todo_List2 .container .form .todos_list .todo .view .checkbox label {
+          border: 1px solid #e2e1e1;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin: 0;
+          margin-top: 5px;
+          position: relative;
+          cursor: pointer; }
+          #Todo_List .container .form .todos_list .todo .view .checkbox label::before,
+          #Todo_List2 .container .form .todos_list .todo .view .checkbox label::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #f5f5f5;
+            border-radius: 50%; }
+          #Todo_List .container .form .todos_list .todo .view .checkbox label::after,
+          #Todo_List2 .container .form .todos_list .todo .view .checkbox label::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f00c";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            color: green;
+            transition: all 0.2s linear; }
+      #Todo_List .container .form .todos_list .todo .view .text,
+      #Todo_List2 .container .form .todos_list .todo .view .text {
+        flex-grow: 1; }
+        #Todo_List .container .form .todos_list .todo .view .text.completed,
+        #Todo_List2 .container .form .todos_list .todo .view .text.completed {
+          text-decoration: line-through;
+          color: #777; }
+      #Todo_List .container .form .todos_list .todo .view .delete,
+      #Todo_List2 .container .form .todos_list .todo .view .delete {
+        width: 30px; }
+        #Todo_List .container .form .todos_list .todo .view .delete .fa-times,
+        #Todo_List2 .container .form .todos_list .todo .view .delete .fa-times {
+          color: #cc9a9a;
+          transition: all 0.3s linear;
+          cursor: pointer; }
+          #Todo_List .container .form .todos_list .todo .view .delete .fa-times:hover,
+          #Todo_List2 .container .form .todos_list .todo .view .delete .fa-times:hover {
+            color: #af5b5e; }
+    #Todo_List .container .form .todos_list .todo .edit,
+    #Todo_List2 .container .form .todos_list .todo .edit {
+      position: absolute;
+      display: none;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%; }
+      #Todo_List .container .form .todos_list .todo .edit input,
+      #Todo_List2 .container .form .todos_list .todo .edit input {
+        width: 90%;
+        height: 100%;
+        padding: 0 5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 1px solid #999;
+        box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2); }
+        #Todo_List .container .form .todos_list .todo .edit input:focus,
+        #Todo_List2 .container .form .todos_list .todo .edit input:focus {
+          outline: none; }
+  #Todo_List .container .form .todos_footer,
+  #Todo_List2 .container .form .todos_footer {
+    position: relative;
+    background: #fff;
+    color: #777;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-top: 1px solid #e6e6e6; }
+    #Todo_List .container .form .todos_footer .todos_count,
+    #Todo_List2 .container .form .todos_footer .todos_count {
+      width: 25%; }
+      #Todo_List .container .form .todos_footer .todos_count span:first-child,
+      #Todo_List2 .container .form .todos_footer .todos_count span:first-child {
+        margin-right: 3px; }
+    #Todo_List .container .form .todos_footer .filters,
+    #Todo_List2 .container .form .todos_footer .filters {
+      text-align: center;
+      flex-grow: 1;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      #Todo_List .container .form .todos_footer .filters li,
+      #Todo_List2 .container .form .todos_footer .filters li {
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer; }
+        #Todo_List .container .form .todos_footer .filters li:hover a,
+        #Todo_List2 .container .form .todos_footer .filters li:hover a {
+          border-color: rgba(175, 47, 47, 0.1); }
+        #Todo_List .container .form .todos_footer .filters li a,
+        #Todo_List2 .container .form .todos_footer .filters li a {
+          border: 1px solid transparent;
+          border-radius: 3px;
+          padding: 5px;
+          transition: all 0.2s linear;
+          text-decoration: none;
+          color: #777; }
+          #Todo_List .container .form .todos_footer .filters li a.selected,
+          #Todo_List2 .container .form .todos_footer .filters li a.selected {
+            border-color: rgba(175, 47, 47, 0.2); }
+    #Todo_List .container .form .todos_footer .clear_completed,
+    #Todo_List2 .container .form .todos_footer .clear_completed {
+      width: 25%;
+      cursor: pointer; }
+      #Todo_List .container .form .todos_footer .clear_completed a:hover,
+      #Todo_List2 .container .form .todos_footer .clear_completed a:hover {
+        border-color: rgba(175, 47, 47, 0.1);
+        text-decoration: underline; }
+    #Todo_List .container .form .todos_footer::before,
+    #Todo_List2 .container .form .todos_footer::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 50px;
+      overflow: hidden;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2); }
+    @media (max-width: 515px) {
+      #Todo_List .container .form .todos_footer .todos_count,
+      #Todo_List2 .container .form .todos_footer .todos_count {
+        order: 1;
+        width: 50%; }
+      #Todo_List .container .form .todos_footer .filters,
+      #Todo_List2 .container .form .todos_footer .filters {
+        order: 3;
+        width: 100%;
+        margin-top: 15px; }
+      #Todo_List .container .form .todos_footer .clear_completed,
+      #Todo_List2 .container .form .todos_footer .clear_completed {
+        order: 2;
+        width: 50%;
+        text-align: right; } }
 
 * {
   box-sizing: border-box; }
@@ -775,5 +997,7 @@ body {
         color: #dc3545; }
 
 /******* End App Quiz *******/
+/******* Start Vue Todo_List  *******/
+/******* End Vue Todo_List  *******/
 
 /*# sourceMappingURL=style.css.map */

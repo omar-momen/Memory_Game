@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:wght@300&display=swap");
-* {
-  font-family: "Kurale", serif;
-  font-family: "Raleway", sans-serif;
-}
 body {
   margin: 0;
   padding-left: 0;
   .psedu_body {
     position: relative;
+    & * {
+      font-family: "Kurale", serif;
+      font-family: "Raleway", sans-serif;
+    }
     .overlay {
       z-index: 1;
       position: absolute;

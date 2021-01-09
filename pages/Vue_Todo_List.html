@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omar (Todo_List)</title>
+    <link rel="stylesheet" href="../css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/libs/all.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/libs/vue_3.0.2_dev.js"></script>
+  </head>
+  <body>
+    <div id="Todo_List2">
+      <h2 class="text-center my-3">{{m_message}}</h2>
+      <div class="container">
+        <div class="form">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="checkbox">
+                <input type="checkbox" id="mainCheck" v-model="all_Done" />
+                <label for="mainCheck">
+                  <i class="fas fa-chevron-down"></i>
+                </label>
+              </div>
+            </div>
+            <input
+              v-model.trim="todo_input"
+              @keyup.enter="add_Todo"
+              type="text"
+              class="form-control"
+              placeholder="What Needs To Be Done"
+            />
+          </div>
+          <div class="todos_list">
+            <div
+              :class="['todo', {'editing': editing_todo == todo}]"
+              v-for="(todo,index) in filtered_Todos"
+              :key="index"
+            >
+              <div class="view">
+                <div class="checkbox">
+                  <input
+                    v-model="todo.completed"
+                    :id="'check'+index"
+                    type="checkbox"
+                  />
+                  <label :for="'check'+index"></label>
+                </div>
+                <div
+                  @dblclick="edite_Todo(todo)"
+                  :class="['text', {'completed': todo.completed}]"
+                >
+                  {{todo.text}}
+                </div>
+                <span @click="delete_Todo(index)" class="delete">
+                  <i class="fas fa-times"></i>
+                </span>
+              </div>
+              <div class="edit">
+                <div class="overlay"></div>
+                <input
+                  @keyup.enter="done_Editing()"
+                  @keyup.esc="cancel_Editing()"
+                  type="text"
+                  v-model="todo.text"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="todos_footer">
+            <div class="todos_count">
+              <span>{{remaning_todos}}</span>
+              <span>{{remaning_todos > 1 ? 'items' : 'item' }}</span> Left
+            </div>
+            <ul class="filters">
+              <li>
+                <a
+                  href="#"
+                  @click.prevent="visibilty = 'All'"
+                  :class="[visibilty == 'All' ? 'selected' : '']"
+                  >All</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  @click.prevent="visibilty = 'Active'"
+                  :class="[visibilty == 'Active' ? 'selected' : '']"
+                  >Active</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  @click.prevent="visibilty = 'Completed'"
+                  :class="[visibilty == 'Completed' ? 'selected' : '']"
+                  >Completed</a
+                >
+              </li>
+            </ul>
+            <div
+              v-if="filters.Completed().length > 0"
+              @click="clear_Completed()"
+              class="clear_completed"
+            >
+              <a>Clear completed</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let local_storage_todos = {
+        fetch_todos: () => {
+          return JSON.parse(localStorage.getItem("Vue_todo_list") || "[]");
+        },
+        set_todo: (todos) => {
+          localStorage.setItem("Vue_todo_list", JSON.stringify(todos));
+        },
+      };
+      const rootComponent = {
+        data() {
+          return {
+            m_message: "Todo_List",
+            visibilty: "All",
+            editing_todo: null,
+            filters: {
+              All: () => {
+                return this.todos;
+              },
+              Active: () => {
+                return this.todos.filter((todo) => {
+                  return !todo.completed;
+                });
+              },
+              Completed: () => {
+                return this.todos.filter((todo) => {
+                  return todo.completed;
+                });
+              },
+            },
+            todos: local_storage_todos.fetch_todos(),
+            todo_input: "",
+          };
+        },
+        methods: {
+          add_Todo() {
+            let todos = [];
+            this.todos.forEach((todo) => {
+              todos.push(todo.text);
+            });
+            if (this.todo_input == "") {
+              swal({
+                title: "Input Empty",
+                text: "Task Can't be empty",
+                icon: "warning",
+                button: "Ok",
+              });
+            } else {
+              if (todos.indexOf(this.todo_input) != -1) {
+                swal({
+                  title: "Matching",
+                  text: "Task Can't be Dublicated",
+                  icon: "warning",
+                  button: "Ok",
+                });
+              } else {
+                let new_todo = {
+                  text: this.todo_input,
+                  completed: false,
+                };
+                this.todos.push(new_todo);
+                this.todo_input = "";
+              }
+            }
+          },
+          delete_Todo(index) {
+            this.todos.splice(index, 1);
+          },
+          clear_Completed() {
+            this.todos = this.filters["Active"]();
+          },
+          edite_Todo(todo) {
+            this.editing_todo = todo;
+            todo.old_todo_text = todo.text;
+          },
+          done_Editing() {
+            if (this.editing_todo.text == "") {
+              this.delete_Todo(this.todos.indexOf(this.editing_todo));
+            }
+            this.editing_todo = null;
+          },
+          cancel_Editing() {
+            console.log("esc");
+            this.editing_todo.text = this.editing_todo.old_todo_text;
+            this.editing_todo = null;
+          },
+        },
+        computed: {
+          filtered_Todos() {
+            return this.filters[this.visibilty]();
+          },
+          remaning_todos() {
+            return this.filters["Active"]().length;
+          },
+          all_Done: {
+            get() {
+              return this.remaning_todos === 0;
+            },
+            set(value) {
+              this.todos.forEach((todo) => {
+                todo.completed = value;
+              });
+            },
+          },
+        },
+        watch: {
+          todos: {
+            handler: function (val) {
+              local_storage_todos.set_todo(val);
+            },
+            deep: true,
+          },
+        },
+      };
+      const app = Vue.createApp(rootComponent);
+      app.mount("#Todo_List2");
+    </script>
+  </body>
+</html>

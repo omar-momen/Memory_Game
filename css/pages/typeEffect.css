@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:wght@300&display=swap");
-* {
-  font-family: "Kurale", serif;
-  font-family: "Raleway", sans-serif; }
-
 body {
   margin: 0;
   padding-left: 0; }
@@ -12,6 +8,9 @@ body {
     width: 100%;
     overflow: hidden;
     background: #333 url(../images/joker.jpg) no-repeat center center/cover; }
+    body .psedu_body * {
+      font-family: "Kurale", serif;
+      font-family: "Raleway", sans-serif; }
     body .psedu_body .overlay {
       z-index: 1;
       position: absolute;
