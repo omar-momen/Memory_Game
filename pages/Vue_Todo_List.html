@@ -78,7 +78,7 @@
                   href="#"
                   @click.prevent="visibilty = 'All'"
                   :class="[visibilty == 'All' ? 'selected' : '']"
-                  >All</a
+                  >All <sapn>{{all_todos}}</sapn></a
                 >
               </li>
               <li>
@@ -86,7 +86,7 @@
                   href="#"
                   @click.prevent="visibilty = 'Active'"
                   :class="[visibilty == 'Active' ? 'selected' : '']"
-                  >Active</a
+                  >Active <sapn>{{remaning_todos}}</sapn></a
                 >
               </li>
               <li>
@@ -94,7 +94,7 @@
                   href="#"
                   @click.prevent="visibilty = 'Completed'"
                   :class="[visibilty == 'Completed' ? 'selected' : '']"
-                  >Completed</a
+                  >Completed <sapn>{{completed_todos}}</sapn></a
                 >
               </li>
             </ul>
@@ -200,8 +200,14 @@
           filtered_Todos() {
             return this.filters[this.visibilty]();
           },
+          all_todos() {
+            return this.filters["All"]().length;
+          },
           remaning_todos() {
             return this.filters["Active"]().length;
+          },
+          completed_todos() {
+            return this.filters["Completed"]().length;
           },
           all_Done: {
             get() {
